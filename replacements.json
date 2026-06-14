@@ -1,0 +1,105 @@
+[
+  {
+    "package": "moment",
+    "replacement": "dayjs",
+    "sizeSavings": "~65KB → ~2KB (节省约97%)",
+    "compatibilityScore": 9,
+    "description": "dayjs 是轻量级日期处理库，API 与 moment 高度兼容，支持链式调用和插件扩展",
+    "migrationNotes": "dayjs().format() 与 moment 兼容；部分高级功能需加载插件如 dayjs/plugin/utc、dayjs/plugin/timezone",
+    "subpaths": {}
+  },
+  {
+    "package": "lodash",
+    "replacement": "lodash-es / 原生替代",
+    "sizeSavings": "~72KB → 按需引入 (可节省50-90%)",
+    "compatibilityScore": 8,
+    "description": "lodash-es 支持 ES Module tree-shaking；许多函数可用原生 JS 替代（如 Object.keys, Array.from, ?. 可选链等）",
+    "migrationNotes": "推荐改用 lodash/get、lodash/debounce 等子路径按需引入，或迁移到原生方法",
+    "subpaths": {
+      "get": "get",
+      "debounce": "debounce",
+      "throttle": "throttle",
+      "cloneDeep": "cloneDeep",
+      "merge": "merge",
+      "pick": "pick",
+      "omit": "omit",
+      "isEmpty": "isEmpty",
+      "isNil": "isNil",
+      "groupBy": "groupBy",
+      "uniqBy": "uniqBy",
+      "flattenDeep": "flattenDeep"
+    }
+  },
+  {
+    "package": "request",
+    "replacement": "node-fetch / axios",
+    "sizeSavings": "~数MB → ~几十KB (节省约95%)",
+    "compatibilityScore": 7,
+    "description": "request 已废弃(deprecated)，建议迁移到 node-fetch (轻量) 或 axios (功能丰富)",
+    "migrationNotes": "request(url, cb) → fetch(url).then(r => r.json())；注意 node-fetch v3 为 ESM only，v2 为 CJS",
+    "subpaths": {}
+  },
+  {
+    "package": "axios",
+    "replacement": "node-fetch / undici",
+    "sizeSavings": "~180KB → ~30KB (节省约83%)",
+    "compatibilityScore": 6,
+    "description": "如果仅需基础 HTTP 请求功能，node-fetch 更轻量；undici 是 Node.js 官方高性能 HTTP 客户端",
+    "migrationNotes": "axios.get() → fetch()；注意 fetch 不自动转换 JSON 需手动 .json()；无拦截器等功能需自行实现",
+    "subpaths": {}
+  },
+  {
+    "package": "chalk",
+    "replacement": "kleur / picocolors",
+    "sizeSavings": "~12KB → ~0.6KB (节省约95%)",
+    "compatibilityScore": 8,
+    "description": "kleur 和 picocolors 是极轻量的终端颜色库，API 类似但体积远小于 chalk",
+    "migrationNotes": "chalk.red(text) → kleur.red(text)；picocolors 更小但 API 略有不同",
+    "subpaths": {}
+  },
+  {
+    "package": "mongoose",
+    "replacement": "mongodb (原生驱动)",
+    "sizeSavings": "~数MB → ~几百KB (节省约70%)",
+    "compatibilityScore": 5,
+    "description": "如果不需要 ODM 层，直接使用 mongodb 原生驱动可大幅减小体积",
+    "migrationNotes": "需要手动处理 schema 验证、中间件等 mongoose 提供的功能；迁移成本较高",
+    "subpaths": {}
+  },
+  {
+    "package": "dotenv",
+    "replacement": "Node.js 内置 (--env-file)",
+    "sizeSavings": "~5KB → 0KB (节省100%)",
+    "compatibilityScore": 9,
+    "description": "Node.js 20.6+ 内置 --env-file 参数支持 .env 文件加载，无需第三方包",
+    "migrationNotes": "node --env-file=.env app.js 替代 require('dotenv').config()；需 Node.js >= 20.6.0",
+    "subpaths": {}
+  },
+  {
+    "package": "minimist",
+    "replacement": "Node.js 内置 util.parseArgs",
+    "sizeSavings": "~4KB → 0KB (节省100%)",
+    "compatibilityScore": 8,
+    "description": "Node.js 18.3+ 内置 util.parseArgs 提供命令行参数解析，可替代 minimist",
+    "migrationNotes": "const { parseArgs } = require('util'); parseArgs({ options, strict: false })；需 Node.js >= 18.3.0",
+    "subpaths": {}
+  },
+  {
+    "package": "cors",
+    "replacement": "手动设置响应头",
+    "sizeSavings": "~3KB → 0KB (节省100%)",
+    "compatibilityScore": 9,
+    "description": "CORS 本质是设置 HTTP 响应头，几行代码即可实现，无需引入第三方包",
+    "migrationNotes": "res.setHeader('Access-Control-Allow-Origin', '*') 等手动设置相关头部即可",
+    "subpaths": {}
+  },
+  {
+    "package": "ws",
+    "replacement": "Node.js 内置 WebSocket (v22+)",
+    "sizeSavings": "~100KB → 0KB (节省100%)",
+    "compatibilityScore": 5,
+    "description": "Node.js 22+ 内置 WebSocket 客户端支持，但服务端功能仍需 ws 或其他库",
+    "migrationNotes": "new WebSocket(url) 可用于客户端；服务端仍推荐使用 ws 包",
+    "subpaths": {}
+  }
+]

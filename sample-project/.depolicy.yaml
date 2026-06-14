@@ -1,0 +1,18 @@
+# 依赖策略配置文件
+# 用于定义项目依赖规则，运行 policy check 进行合规检查
+
+blacklist:
+  - "eval-requires"
+
+allowed-licenses:
+  - "MIT"
+  - "ISC"
+  - "BSD-2-Clause"
+  - "BSD-3-Clause"
+  - "Apache-2.0"
+
+max-deps: 200
+
+max-depth: 10
+
+no-range: false
