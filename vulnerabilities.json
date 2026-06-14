@@ -1,0 +1,162 @@
+[
+  {
+    "package": "lodash",
+    "affectedVersions": ">=4.0.0 <=4.17.20",
+    "severity": "high",
+    "cve": "CVE-2020-28500",
+    "description": "Prototype Pollution in lodash via zipObjectDeep and set functions",
+    "fixVersion": "4.17.21"
+  },
+  {
+    "package": "lodash",
+    "affectedVersions": "<4.17.15",
+    "severity": "medium",
+    "cve": "CVE-2019-10744",
+    "description": "Prototype Pollution vulnerability in lodash's defaultsDeep function",
+    "fixVersion": "4.17.15"
+  },
+  {
+    "package": "minimist",
+    "affectedVersions": "<0.2.1",
+    "severity": "high",
+    "cve": "CVE-2021-44906",
+    "description": "Prototype Pollution in minimist via the constructor function",
+    "fixVersion": "0.2.1"
+  },
+  {
+    "package": "minimist",
+    "affectedVersions": ">=1.0.0 <1.2.6",
+    "severity": "high",
+    "cve": "CVE-2021-44906",
+    "description": "Prototype Pollution in minimist via the constructor function",
+    "fixVersion": "1.2.6"
+  },
+  {
+    "package": "express",
+    "affectedVersions": "<4.17.3",
+    "severity": "medium",
+    "cve": "CVE-2022-24999",
+    "description": "qs vulnerable to Prototype Pollution in Express",
+    "fixVersion": "4.17.3"
+  },
+  {
+    "package": "axios",
+    "affectedVersions": ">=0.8.1 <0.21.2",
+    "severity": "high",
+    "cve": "CVE-2021-3749",
+    "description": "Regular Expression Denial of Service in axios via the trim function",
+    "fixVersion": "0.21.2"
+  },
+  {
+    "package": "axios",
+    "affectedVersions": "<0.27.2",
+    "severity": "high",
+    "cve": "CVE-2022-24999",
+    "description": "Prototype Pollution vulnerability affecting axios",
+    "fixVersion": "0.27.2"
+  },
+  {
+    "package": "glob-parent",
+    "affectedVersions": ">=3.0.0 <5.1.2",
+    "severity": "high",
+    "cve": "CVE-2020-28469",
+    "description": "Regular Expression Denial of Service in glob-parent",
+    "fixVersion": "5.1.2"
+  },
+  {
+    "package": "dot-prop",
+    "affectedVersions": "<4.2.1",
+    "severity": "high",
+    "cve": "CVE-2020-8116",
+    "description": "Prototype Pollution vulnerability in dot-prop",
+    "fixVersion": "4.2.1"
+  },
+  {
+    "package": "dot-prop",
+    "affectedVersions": ">=5.0.0 <5.1.1",
+    "severity": "high",
+    "cve": "CVE-2020-8116",
+    "description": "Prototype Pollution vulnerability in dot-prop",
+    "fixVersion": "5.1.1"
+  },
+  {
+    "package": "node-fetch",
+    "affectedVersions": "<2.6.7",
+    "severity": "high",
+    "cve": "CVE-2022-0235",
+    "description": "Exposure of Sensitive Information to an Unauthorized Actor in node-fetch",
+    "fixVersion": "2.6.7"
+  },
+  {
+    "package": "moment",
+    "affectedVersions": ">=2.18.0 <2.29.4",
+    "severity": "medium",
+    "cve": "CVE-2022-31129",
+    "description": "Path Traversal vulnerability in moment",
+    "fixVersion": "2.29.4"
+  },
+  {
+    "package": "tar",
+    "affectedVersions": ">=4.0.0 <4.4.18",
+    "severity": "critical",
+    "cve": "CVE-2021-37713",
+    "description": "Arbitrary File Creation/Overwrite via insufficient symlink protection in tar",
+    "fixVersion": "4.4.18"
+  },
+  {
+    "package": "tar",
+    "affectedVersions": ">=5.0.0 <5.0.10",
+    "severity": "critical",
+    "cve": "CVE-2021-37713",
+    "description": "Arbitrary File Creation/Overwrite via insufficient symlink protection in tar",
+    "fixVersion": "5.0.10"
+  },
+  {
+    "package": "tar",
+    "affectedVersions": ">=6.0.0 <6.1.9",
+    "severity": "critical",
+    "cve": "CVE-2021-37713",
+    "description": "Arbitrary File Creation/Overwrite via insufficient symlink protection in tar",
+    "fixVersion": "6.1.9"
+  },
+  {
+    "package": "ansi-html",
+    "affectedVersions": "<0.0.8",
+    "severity": "medium",
+    "cve": "CVE-2021-23424",
+    "description": "Regular Expression Denial of Service in ansi-html",
+    "fixVersion": "0.0.8"
+  },
+  {
+    "package": "path-parse",
+    "affectedVersions": "<1.0.7",
+    "severity": "medium",
+    "cve": "CVE-2021-23343",
+    "description": "Regular Expression Denial of Service in path-parse",
+    "fixVersion": "1.0.7"
+  },
+  {
+    "package": "ws",
+    "affectedVersions": ">=7.0.0 <7.4.6",
+    "severity": "high",
+    "cve": "CVE-2021-32640",
+    "description": "ReDoS in Sec-Websocket-Protocol header parsing in ws",
+    "fixVersion": "7.4.6"
+  },
+  {
+    "package": "ws",
+    "affectedVersions": "<6.2.2",
+    "severity": "medium",
+    "cve": "CVE-2019-8331",
+    "description": "Open Redirect vulnerability in ws",
+    "fixVersion": "6.2.2"
+  },
+  {
+    "package": "json-schema",
+    "affectedVersions": "<0.4.0",
+    "severity": "critical",
+    "cve": "CVE-2021-3918",
+    "description": "Prototype Pollution in json-schema",
+    "fixVersion": "0.4.0"
+  }
+]

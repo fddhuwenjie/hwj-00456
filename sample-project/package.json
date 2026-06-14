@@ -1,0 +1,23 @@
+{
+  "name": "sample-project",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "lodash": "4.17.20",
+    "axios": "^0.21.1",
+    "moment": "^2.29.1",
+    "dotenv": "^10.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.0",
+    "cors": "^2.8.5",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0",
+    "chalk": "^4.1.1",
+    "commander": "^8.0.0",
+    "ws": "^7.4.0",
+    "node-fetch": "^2.6.1",
+    "minimist": "^1.2.5"
+  }
+}
